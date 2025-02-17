@@ -44,3 +44,7 @@ resource "sakuracloud_apprun_application" "go-todoapp" {
     ]
   }
 }
+
+output "url" {
+  value = "https://app-${sakuracloud_apprun_application.go-todoapp.id}.ingress.apprun.sakura.ne.jp"
+}
